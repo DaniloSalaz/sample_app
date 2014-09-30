@@ -7,9 +7,9 @@ describe "StaticPages" do
       visit '/static_pages/home'
       expect(page).to have_content('Sample App')
     end
-    it "debe tener eltitulo 'Sample App / Pagina Inicial'"do
+    it "debe tener el titulo Predefinido"do
     visit '/static_pages/home'
-    expect(page).to have_title('Sample App / Pagina Inicial')
+    expect(page).not_to have_title('Sample App / Pagina Inicial')
     end
   end
   describe "Pagina de ayuda 'Ayuda'" do 
