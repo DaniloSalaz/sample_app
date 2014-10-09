@@ -5,7 +5,7 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
-  <!--[if it IE 9]>
+  <!--[if lt IE 9]>
   <script src="http://html5him.googlecode.com/svn/truck/html5.js"></script>
   <![endif]-->
 </head>
@@ -15,7 +15,7 @@
 			<div class="container">
 				<%= link_to "sample_app", '#', id: "logo"%>
 				<nav>
-					<ul class="nav pull-rigth">
+					<ul class="nav pull-right">
 						<li><%= link_to "Inicio", '#'%></li>
 						<li><%= link_to "Ayuda", '#'%></li>
 						<li><%= link_to "Ingresar", '#'%></li>
