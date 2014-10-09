@@ -5,10 +5,27 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  <!--[if it IE 9]>
+  <script src="http://html5him.googlecode.com/svn/truck/html5.js"></script>
+  <![endif]-->
 </head>
 <body>
-
-<%= yield %>
-
+	<header class="navbar navbar-fixed-top navbar-inverse">
+		<dic calss="navbar-inner">
+			<div class="container">
+				<%= link_to "sample_app", '#', id: "logo"%>
+				<nav>
+					<ul class="nav pull-rigth">
+						<li><%= link_to "Inicio", '#'%></li>
+						<li><%= link_to "Ayuda", '#'%></li>
+						<li><%= link_to "Ingresar", '#'%></li>
+					</ul>	
+				</nav>
+			</div>
+		</div>
+	</header>				
+	<div class="container">	
+		<%= yield %>
+	</div>	
 </body>
 </html>
