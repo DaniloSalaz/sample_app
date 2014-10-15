@@ -1,37 +1,22 @@
 require 'spec_helper'
 
 describe "StaticPages" do
+  subject { page }
   describe "Pagina de Inicio" do
-    it "Debe tener el controlador 'Sample App'" do
-      # Run the generator again with the --webrat flag if you want to use webrat methods/matchers
-      visit '/static_pages/home'
-      expect(page).to have_content('Sample App')
-    end
-    it "debe tener el titulo Predefinido"do
-    visit '/static_pages/home'
-    expect(page).not_to have_title('Sample App / Pagina Inicial')
-    end
-  end
+    before { visit root_path }
+    it { should have_content('Sample app')}
+    it { should_not have_title('Sample_app / Pagina Inicial')}
+   end
   describe "Pagina de ayuda 'Ayuda'" do 
-  	it "Debe tener el controlador 'Ayuda' "do
-  		visit '/static_pages/help'
-  		expect(page).to have_content('Ayuda')
-  	end
-
-    it "debe tener eltitulo 'Sample App / Ayuda'"do
-    visit '/static_pages/help'
-    expect(page).to have_title('Sample App / Ayuda')
-    end
+  	before { visit ayuda_path }
+    it { should have_content('Ayuda')}
+    it { should have_title('Sample_app / ayuda')}
+    
   end
   describe "Pagina Acerca de" do
-    it "Debe tener el contenido 'Acerca de'"do
-      visit '/static_pages/acerca_de'
-      expect(page).to have_content('Acerca de')
-   end
-
-    it "debe tener eltitulo 'Sample App / Acerca de '"do
-    visit '/static_pages/acerca_de'
-    expect(page).to have_title('Sample App / Acerca de')
-    end
-  end
+    before { visit acerca_de_path }
+    it { should have_content('Acerca de')}
+    it { should have_title('Sample_app / acerca de')}
+    
+end
 end
