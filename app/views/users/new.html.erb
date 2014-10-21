@@ -1,3 +1,27 @@
 <% provide(:title, 'Registro') %>
 <h1>Registro</h1>
-<p>Pagina de Regitstro de Sample app</p>
+<dic class='row'>
+	<div class='spand offset3'>
+		<%= form_for(@user) do |f| %>
+
+			<%= f.label :name %>
+			<%= f.text_field :name %>
+
+			<%= f.label :email %>
+			<%= f.text_field :email %>
+
+			<%= f.label :password %>
+			<%= f.text_field :password %>
+
+			<%= f.label :password_confirmation %>
+			<%= f.text_field :password_confirmation %>
+
+			<%= f.submit "Crear mi cuanta", class "btn btn-large btn-primary" %>
+
+			<% end %>
+		</div>
+	</div>
+
+
+
+

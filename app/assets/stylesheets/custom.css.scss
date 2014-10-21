@@ -93,3 +93,30 @@ footer{
 	-webkit-box-sizing: border-box;
 	box-sizigin: border-box;
 }
+/*Barra lateral */
+aside{
+	section {
+		paddig: 10px 0;
+		border-top: 1px solid #999;
+		&:first-child {
+			border: 0;
+			padding-top: 0;
+		}
+		span{
+			display: block;
+			margin-bottom: 3px;
+			margin-top: 0px;
+		}
+		h1{
+			front-size: 1.4em;
+			text-aling: left;
+			letter-spacing: -1px;
+			margin-bottom: 3px;
+			margin-top: 0px;
+		}
+	}
+}
+.gravatar {
+	float: left;
+	margin-rigth: 10px;	
+}
