@@ -16,24 +16,24 @@ describe "UserPages" do
 		it { should have_content('Registro') }
 		it { should have_title(full_title('Registro')) }
 	end
-	decribe "registro" do
+	describe "Registro" do
 		before { visit registro_path }
 		let(:submit) { "Crear mi cuenta" }
 
 		describe "con informacion invalida" do
 			it "no decribe crear al usuario" do
-				expect {click_botton submit }.not_to change(User, :cont)
+				expect {click_button submit }.not_to change(User, :count)
 			end
 		end
 		describe "con informacion valida" do
 			before do
-				fill_in "Name",      	whith: "Usuario Ejemplo"
-				fill_in "Email", 		whith: "User@ejemplo.com"
-				fill_in "Password", 	whith: "password"
-				fill_in "Confirmacion", whith: "password"
+				fill_in "Name",      	with: "Usuario Ejemplo"
+				fill_in "Email", 		with: "User@ejemplo.com"
+				fill_in "Password", 	with: "password"
+				fill_in "Confirmation", with: "password"
 			end	
 			it "debe crear un usuario" do
-				expect { click_botton submit }.to change(User, :count).by(1)
+				expect { click_button submit }.to change(User, :count).by(1)
 			end
 		end			
 

@@ -120,3 +120,26 @@ aside{
 	float: left;
 	margin-rigth: 10px;	
 }
+/* fomrs*/
+input, textarea, select, .uneditable-input{
+	border: 1px solid #bbb;
+	width: 100%;
+	margin-bottom: 15px;
+	-moz-box-sizzing: border-box;
+	-webkit-box-sizzing: border-box;
+	box-sizzing: border-box;
+}
+input{
+	height: auto !important;
+}
+#error_explanation{
+	color: #f00;
+	ul{
+		list-style: nome;
+		margin: 0 0 18px 0;
+	}
+}
+.field_With_erros {
+	@extend .control-group;
+	@extend .error;
+}

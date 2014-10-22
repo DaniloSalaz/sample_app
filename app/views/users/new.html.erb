@@ -3,7 +3,7 @@
 <dic class='row'>
 	<div class='spand offset3'>
 		<%= form_for(@user) do |f| %>
-
+			<%= render 'shared/error_messages' %>
 			<%= f.label :name %>
 			<%= f.text_field :name %>
 
@@ -11,12 +11,12 @@
 			<%= f.text_field :email %>
 
 			<%= f.label :password %>
-			<%= f.text_field :password %>
+			<%= f.password_field :password %>
 
-			<%= f.label :password_confirmation %>
-			<%= f.text_field :password_confirmation %>
+			<%= f.label :password_confirmation, "Confirmation" %>
+			<%= f.password_field :password_confirmation %>
 
-			<%= f.submit "Crear mi cuanta", class "btn btn-large btn-primary" %>
+			<%= f.submit "Crear mi cuenta", class: "btn btn-large btn-primary" %>
 
 			<% end %>
 		</div>
