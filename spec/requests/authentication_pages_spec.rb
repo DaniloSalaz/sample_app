@@ -1,14 +1,14 @@
 require 'spec_helper'
 
-describe "AuthenticationPages" do
+describe "Authentication" do
   
-  subject { Authentication } 
+  subject { page } 
   		
   		describe "paginas de ingreso" do
 
   			before { visit ingreso_path }
   			it { should have_content ('Ingreso') }
-  			it { should have_title('Ingreso') }
+  			it { should have_title ('Ingreso') }
   		
   		end
  
@@ -29,8 +29,8 @@ describe "AuthenticationPages" do
  		end
  		it { should have_title(user.name) }
  		it { should have_link('Perfil', href: user_path(user)) }
- 		it { should have_link('Salida'), herf: salida_path }
- 		it { should_not have_link('Ingreso', herf: ingreso_path )}
+ 		it { should have_link('Salir'), href: salida_path }
+ 		it { should_not have_link('Ingreso', href: ingreso_path )}
  	end
  	end		
 end
